@@ -14,11 +14,13 @@
     window._paq_loaded = window._paq_loaded || false;
 
     if (!_paq_loaded) {
-      var u = `//${settings.host_url}/`;
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', settings.website_id]);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        (function() {
+        var u="//sqa-web.ory.sh/";
+        _paq.push(['setTrackerUrl', u+'np.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
       _paq_loaded = true;
     }
 
